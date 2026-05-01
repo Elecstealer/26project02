@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 신선 추천 · 산지직송</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products-page.css">
+</head>
+<body class="page-products">
+    <header class="site-header" id="site-header">
+        <div class="site-header__backdrop" id="nav-backdrop" aria-hidden="true"></div>
+        <div class="site-header__bar">
+            <a href="index.html" class="site-header__logo" data-close-nav>
+                <img src="img/logo.png" alt="산지직송" width="112" height="56" decoding="async">
+            </a>
+
+            <nav class="site-header__nav" id="site-nav" aria-label="주 메뉴">
+                <ul class="site-header__menu" id="site-menu">
+                    <li><a href="index.html#home">홈</a></li>
+                    <li class="is-current"><a href="products_page.html" aria-current="page">상품</a></li>
+                    <li><a href="subscribe_page.html">구독</a></li>
+                    <li><a href="origin_page.html">산지이야기</a></li>
+                    <li><a href="mypage.html">마이페이지</a></li>
+                </ul>
+            </nav>
+
+            <div class="site-header__actions">
+                <button type="button" class="site-header__text-btn" aria-label="검색">검색</button>
+                <a href="cart_page.html" class="site-header__text-btn">장바구니</a>
+                <a href="#" class="site-header__pill">로그인</a>
+            </div>
+
+            <button type="button" class="site-header__burger" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+                <span class="site-header__burger-line" aria-hidden="true"></span>
+                <span class="site-header__burger-line" aria-hidden="true"></span>
+                <span class="site-header__burger-line" aria-hidden="true"></span>
+                <span class="visually-hidden">메뉴 열기</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="products-layout" id="main-content">
+        <header class="products-hero">
+            <h1 class="products-hero__title">오늘의 신선 추천</h1>
+            <p class="products-hero__sub">AI가 회원님의 취향에 맞게 골랐어요</p>
+        </header>
+
+        <div class="products-toolbar">
+            <div
+                class="products-tabs"
+                role="tablist"
+                aria-label="상품 카테고리"
+            >
+                <button type="button" class="products-tab is-active" role="tab" aria-selected="true" data-filter="all">전체</button>
+                <button type="button" class="products-tab" role="tab" aria-selected="false" data-filter="veg">채소·과일</button>
+                <button type="button" class="products-tab" role="tab" aria-selected="false" data-filter="sea-meat">수산·육류</button>
+                <button type="button" class="products-tab" role="tab" aria-selected="false" data-filter="organic">유기농</button>
+                <button type="button" class="products-tab" role="tab" aria-selected="false" data-filter="meal-kit">밀키트</button>
+                <button type="button" class="products-tab" role="tab" aria-selected="false" data-filter="ready">간편식</button>
+                <button type="button" class="products-tab" role="tab" aria-selected="false" data-filter="frozen">빵·떡</button> 
+            </div>
+
+            <div class="products-controls">
+                <label class="products-sort">
+                    <span class="products-sort__label">정렬</span>
+                    <select class="products-sort__select" id="product-sort" name="sort">
+                        <option value="recommended" selected>추천순</option>
+                        <option value="price-asc">가격 낮은순</option>
+                        <option value="price-desc">가격 높은순</option>
+                    </select>
+                </label>
+                <button type="button" class="products-filter-btn" id="filter-demo-btn">
+                    필터 <span class="products-filter-btn__icon" aria-hidden="true">⚙️</span>
+                </button>
+            </div>
+        </div>
+
+        <p class="products-hint visually-hidden" id="products-live" aria-live="polite"></p>
+
+        <ul class="product-grid" id="product-grid">
+            <li class="product-card" data-category="veg" data-price="8900">
+                <a href="#" class="product-card__link">
+                    <div class="product-card__thumb">
+                        <img src="img/products_01.png" alt="" width="400" height="300" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <span class="product-card__badge">채소·과일</span>
+                        <h2 class="product-card__name">완숙 토마토 300g</h2>
+                        <p class="product-card__desc">당도 높은 국내산, 샐러드·조림에 좋아요</p>
+                        <p class="product-card__price"><span class="product-card__amount">8,900</span>원</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-card" data-category="sea-meat" data-price="15800">
+                <a href="#" class="product-card__link">
+                    <div class="product-card__thumb">
+                        <img src="img/products_02.png" alt="" width="400" height="300" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <span class="product-card__badge">수산·육류</span>
+                        <h2 class="product-card__name">제주 굴비 5마리</h2>
+                        <p class="product-card__desc">손질 완료 · 구이·찜용</p>
+                        <p class="product-card__price"><span class="product-card__amount">15,800</span>원</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-card" data-category="organic" data-price="4200">
+                <a href="#" class="product-card__link">
+                    <div class="product-card__thumb">
+                        <img src="img/products_03.png" alt="" width="400" height="300" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <span class="product-card__badge">유기농</span>
+                        <h2 class="product-card__name">친환경 브로콜리 2입</h2>
+                        <p class="product-card__desc">무농약 인증, 아삭한 식감</p>
+                        <p class="product-card__price"><span class="product-card__amount">4,200</span>원</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-card" data-category="meal-kit" data-price="19900">
+                <a href="#" class="product-card__link">
+                    <div class="product-card__thumb">
+                        <img src="img/bg01_04.png" alt="" width="400" height="300" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <span class="product-card__badge">밀키트</span>
+                        <h2 class="product-card__name">한 판 스테이크 밀키트 2인분</h2>
+                        <p class="product-card__desc">소스·채소 포함, 15분 완성</p>
+                        <p class="product-card__price"><span class="product-card__amount">19,900</span>원</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-card" data-category="ready" data-price="6500">
+                <a href="#" class="product-card__link">
+                    <div class="product-card__thumb">
+                        <img src="img/products_04.png" alt="" width="400" height="300" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <span class="product-card__badge">간편식</span>
+                        <h2 class="product-card__name">닭가슴살 샐러드 1팩</h2>
+                        <p class="product-card__desc">드레싱 별도 · 냉장 직배송</p>
+                        <p class="product-card__price"><span class="product-card__amount">6,500</span>원</p>
+                    </div>
+                </a>
+            </li>
+            <li class="product-card" data-category="frozen" data-price="8000">
+                <a href="#" class="product-card__link">
+                    <div class="product-card__thumb">
+                        <img src="img/products_05.png" alt="" width="400" height="300" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <span class="product-card__badge">빵·떡</span>
+                        <h2 class="product-card__name">바게트 빵 2개</h2>
+                        <p class="product-card__desc">당일 생산, 당일 배송</p>
+                        <p class="product-card__price"><span class="product-card__amount">8,000</span>원</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </main>
+
+    <script src="js/products-page.js"></script>
+</body>
+</html>

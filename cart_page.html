@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 · 산지직송</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart-page.css">
+</head>
+<body class="page-cart">
+    <header class="site-header" id="site-header">
+        <div class="site-header__backdrop" id="nav-backdrop" aria-hidden="true"></div>
+        <div class="site-header__bar">
+            <a href="index.html" class="site-header__logo" data-close-nav>
+                <img src="img/logo.png" alt="산지직송" width="112" height="56" decoding="async">
+            </a>
+
+            <nav class="site-header__nav" id="site-nav" aria-label="주 메뉴">
+                <ul class="site-header__menu" id="site-menu">
+                    <li><a href="index.html#home">홈</a></li>
+                    <li><a href="products_page.html">상품</a></li>
+                    <li><a href="subscribe_page.html">구독</a></li>
+                    <li><a href="origin_page.html">산지이야기</a></li>
+                    <li><a href="mypage.html">마이페이지</a></li>
+                </ul>
+            </nav>
+
+            <div class="site-header__actions">
+                <button type="button" class="site-header__text-btn" aria-label="검색">검색</button>
+                <a href="cart_page.html" class="site-header__text-btn" aria-current="page">장바구니</a>
+                <a href="#" class="site-header__pill">로그인</a>
+            </div>
+
+            <button type="button" class="site-header__burger" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+                <span class="site-header__burger-line" aria-hidden="true"></span>
+                <span class="site-header__burger-line" aria-hidden="true"></span>
+                <span class="site-header__burger-line" aria-hidden="true"></span>
+                <span class="visually-hidden">메뉴 열기</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="cart-layout" id="main-content">
+        <header class="cart-hero">
+            <h1 class="cart-hero__title">신선한 선택, 거의 다 왔어요 <span class="cart-hero__icon" aria-hidden="true">🛒</span></h1>
+            <p class="cart-hero__sub">지금 구독하면 이 주문부터 배달비 무료</p>
+        </header>
+
+        <nav class="cart-steps" aria-label="주문 진행 단계">
+            <ol class="cart-steps__list">
+                <li class="cart-steps__item is-active">
+                    <span class="cart-steps__dot" aria-hidden="true"></span>
+                    <span class="cart-steps__label">장바구니</span>
+                </li>
+                <li class="cart-steps__sep" aria-hidden="true">→</li>
+                <li class="cart-steps__item">
+                    <span class="cart-steps__dot" aria-hidden="true"></span>
+                    <span class="cart-steps__label">배송정보</span>
+                </li>
+                <li class="cart-steps__sep" aria-hidden="true">→</li>
+                <li class="cart-steps__item">
+                    <span class="cart-steps__dot" aria-hidden="true"></span>
+                    <span class="cart-steps__label">결제</span>
+                </li>
+                <li class="cart-steps__sep" aria-hidden="true">→</li>
+                <li class="cart-steps__item">
+                    <span class="cart-steps__dot" aria-hidden="true"></span>
+                    <span class="cart-steps__label">완료</span>
+                </li>
+            </ol>
+        </nav>
+
+        <aside class="cart-upsell" role="complementary" aria-labelledby="upsell-title">
+            <p id="upsell-title" class="cart-upsell__text">4,900원 구독으로 이번 배달비 2,500원 절약하세요</p>
+            <a href="subscribe_page.html" class="cart-upsell__cta">구독 알아보기</a>
+        </aside>
+    </main>
+
+    <script src="js/cart-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지 · 산지직송</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mypage.css">
+</head>
+<body class="page-mypage">
+    <header class="site-header" id="site-header">
+        <div class="site-header__backdrop" id="nav-backdrop" aria-hidden="true"></div>
+        <div class="site-header__bar">
+            <a href="index.html" class="site-header__logo" data-close-nav>
+                <img src="img/logo.png" alt="산지직송" width="112" height="56" decoding="async">
+            </a>
+
+            <nav class="site-header__nav" id="site-nav" aria-label="주 메뉴">
+                <ul class="site-header__menu" id="site-menu">
+                    <li><a href="index.html#home">홈</a></li>
+                    <li><a href="products_page.html">상품</a></li>
+                    <li><a href="subscribe_page.html">구독</a></li>
+                    <li><a href="origin_page.html">산지이야기</a></li>
+                    <li class="is-current"><a href="mypage.html" aria-current="page">마이페이지</a></li>
+                </ul>
+            </nav>
+
+            <div class="site-header__actions">
+                <button type="button" class="site-header__text-btn" aria-label="검색">검색</button>
+                <a href="cart_page.html" class="site-header__text-btn">장바구니</a>
+                <a href="#" class="site-header__pill">로그인</a>
+            </div>
+
+            <button type="button" class="site-header__burger" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+                <span class="site-header__burger-line" aria-hidden="true"></span>
+                <span class="site-header__burger-line" aria-hidden="true"></span>
+                <span class="site-header__burger-line" aria-hidden="true"></span>
+                <span class="visually-hidden">메뉴 열기</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="mypage-layout" id="main-content">
+        <header class="mypage-hero">
+            <h1 class="mypage-hero__title">안녕하세요, 박시은님 <span class="mypage-hero__leaf" aria-hidden="true">🌿</span></h1>
+            <p class="mypage-hero__sub">오늘의 추천 상품이 도착했어요</p>
+        </header>
+
+        <nav class="mypage-quick" aria-label="빠른 메뉴">
+            <h2 class="mypage-section-title">빠른 메뉴</h2>
+            <ul class="mypage-quick__grid">
+                <li>
+                    <a href="#" class="mypage-quick__item">
+                        <span class="mypage-quick__icon" aria-hidden="true">📦</span>
+                        <span class="mypage-quick__label">주문 현황</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="subscribe_page.html" class="mypage-quick__item">
+                        <span class="mypage-quick__icon" aria-hidden="true">💳</span>
+                        <span class="mypage-quick__label">구독 관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="mypage-quick__item">
+                        <span class="mypage-quick__icon" aria-hidden="true">⭐</span>
+                        <span class="mypage-quick__label">찜 목록</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="mypage-quick__item mypage-quick__item--points">
+                        <span class="mypage-quick__icon" aria-hidden="true">🎁</span>
+                        <span class="mypage-quick__label">포인트: <strong>3,200P</strong></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="mypage-banner" aria-labelledby="banner-title">
+            <h2 id="banner-title" class="visually-hidden">재구매 추천</h2>
+            <p class="mypage-banner__text">지난달에 구매하셨던 한우 사골이 입고됐어요!</p>
+            <a href="products_page.html" class="mypage-banner__cta">보러 가기</a>
+        </section>
+    </main>
+
+    <script src="js/mypage.js"></script>
+</body>
+</html>

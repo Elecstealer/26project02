@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정기 구독 · 산지직송</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/subscribe-page.css">
+</head>
+<body class="page-subscribe">
+    <header class="site-header" id="site-header">
+        <div class="site-header__backdrop" id="nav-backdrop" aria-hidden="true"></div>
+        <div class="site-header__bar">
+            <a href="index.html" class="site-header__logo" data-close-nav>
+                <img src="img/logo.png" alt="산지직송" width="112" height="56" decoding="async">
+            </a>
+
+            <nav class="site-header__nav" id="site-nav" aria-label="주 메뉴">
+                <ul class="site-header__menu" id="site-menu">
+                    <li><a href="index.html#home">홈</a></li>
+                    <li><a href="products_page.html">상품</a></li>
+                    <li class="is-current"><a href="subscribe_page.html" aria-current="page">구독</a></li>
+                    <li><a href="origin_page.html">산지이야기</a></li>
+                    <li><a href="mypage.html">마이페이지</a></li>
+                </ul>
+            </nav>
+
+            <div class="site-header__actions">
+                <button type="button" class="site-header__text-btn" aria-label="검색">검색</button>
+                <a href="cart_page.html" class="site-header__text-btn">장바구니</a>
+                <a href="#" class="site-header__pill">로그인</a>
+            </div>
+
+            <button type="button" class="site-header__burger" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+                <span class="site-header__burger-line" aria-hidden="true"></span>
+                <span class="site-header__burger-line" aria-hidden="true"></span>
+                <span class="site-header__burger-line" aria-hidden="true"></span>
+                <span class="visually-hidden">메뉴 열기</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="subscribe-layout" id="main-content">
+        <header class="subscribe-hero">
+            <h1 class="subscribe-hero__title">매주 신선함을, 정기적으로</h1>
+            <p class="subscribe-hero__sub">구독하면 배달비 무료 + 매달 최대 20% 절약</p>
+        </header>
+
+        <section class="subscribe-plans" aria-labelledby="plans-heading">
+            <h2 id="plans-heading" class="visually-hidden">구독 플랜</h2>
+            <ul class="plan-grid">
+                <li>
+                    <article class="plan-card">
+                        <div class="plan-card__head">
+                            <span class="plan-card__icon" aria-hidden="true">🌱</span>
+                            <h3 class="plan-card__name">베이직</h3>
+                        </div>
+                        <p class="plan-card__price"><span class="plan-card__amount">4,900</span>원<span class="plan-card__period"> / 월</span></p>
+                        <ul class="plan-card__features">
+                            <li>무료배송</li>
+                        </ul>
+                    </article>
+                </li>
+                <li>
+                    <article class="plan-card">
+                        <div class="plan-card__head">
+                            <span class="plan-card__icon" aria-hidden="true">🌿</span>
+                            <h3 class="plan-card__name">프리미엄</h3>
+                        </div>
+                        <p class="plan-card__price"><span class="plan-card__amount">9,900</span>원<span class="plan-card__period"> / 월</span></p>
+                        <ul class="plan-card__features">
+                            <li>무료배송</li>
+                            <li>5% 적립</li>
+                            <li>MD 큐레이션 박스</li>
+                        </ul>
+                    </article>
+                </li>
+                <li>
+                    <article class="plan-card">
+                        <div class="plan-card__head">
+                            <span class="plan-card__icon" aria-hidden="true">🍀</span>
+                            <h3 class="plan-card__name">패밀리</h3>
+                        </div>
+                        <p class="plan-card__price"><span class="plan-card__amount">14,900</span>원<span class="plan-card__period"> / 월</span></p>
+                        <ul class="plan-card__features">
+                            <li>위 혜택 + 산지 방문 체험 초대</li>
+                        </ul>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <div class="subscribe-cta-wrap">
+            <a href="#" class="subscribe-cta">지금 구독 시작하기 <span class="subscribe-cta__dash">—</span> 첫 달 무료</a>
+        </div>
+    </main>
+
+    <script src="js/subscribe-page.js"></script>
+</body>
+</html>

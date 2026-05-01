@@ -1,0 +1,114 @@
+/* 산지 이야기 (origin_page.html) */
+
+.page-origin {
+    background: var(--white);
+}
+
+.origin-layout {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: calc(var(--header-h, 4.25rem) + 1.5rem) 1.25rem 3.5rem;
+}
+
+.origin-hero {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.origin-hero__title {
+    margin: 0 0 0.6rem;
+    font-size: clamp(1.5rem, 4.2vw, 2rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--green-900);
+    line-height: 1.3;
+}
+
+.origin-hero__sub {
+    margin: 0;
+    font-size: clamp(0.9375rem, 2.5vw, 1.0625rem);
+    color: rgba(27, 94, 32, 0.82);
+}
+
+.origin-split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    align-items: start;
+}
+
+.origin-split__media {
+    border-radius: 1rem;
+    overflow: hidden;
+    background: var(--green-100);
+    box-shadow: 0 8px 32px rgba(27, 94, 32, 0.1);
+}
+
+.origin-split__media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+}
+
+.origin-split__text {
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    color: rgba(27, 94, 32, 0.92);
+}
+
+.origin-split__heading {
+    margin: 0 0 1rem;
+    font-size: clamp(1.125rem, 2.5vw, 1.35rem);
+    font-weight: 800;
+    color: var(--green-900);
+}
+
+.origin-split__text p {
+    margin: 0 0 1rem;
+}
+
+.origin-split__text p:last-child {
+    margin-bottom: 0;
+}
+
+.origin-split__note {
+    margin-top: 1.25rem;
+    padding: 1rem 1.1rem;
+    font-size: 0.875rem;
+    line-height: 1.65;
+    color: rgba(27, 94, 32, 0.88);
+    background: var(--green-100);
+    border-left: 4px solid var(--green-600);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+    .origin-split {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 2.5rem;
+        align-items: center;
+    }
+
+    .origin-split__media img {
+        aspect-ratio: auto;
+        min-height: 320px;
+        max-height: 520px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .origin-split {
+        gap: 3rem;
+    }
+
+    .origin-split__text {
+        font-size: 1rem;
+    }
+}
+
+.page-origin .site-header__menu li.is-current > a {
+    color: var(--green-600);
+    font-weight: 700;
+}
