@@ -596,6 +596,7 @@ a {
     gap: 1rem;
     width: 100%;
     max-width: 56rem;
+    min-height: 10rem;
     margin: 0 auto;
     padding: 1.75rem 1.25rem 1.5rem;
     box-sizing: border-box;
