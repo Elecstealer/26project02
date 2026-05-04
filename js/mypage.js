@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const toggle = document.getElementById("nav-toggle");
     const backdrop = document.getElementById("nav-backdrop");
     const nav = document.getElementById("site-nav");
+    const yearEl = document.getElementById("footer-year");
+    if (yearEl) {
+        yearEl.textContent = String(new Date().getFullYear());
+    }
 
     const syncHeaderHeight = () => {
         if (!header) return;

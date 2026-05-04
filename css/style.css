@@ -18,6 +18,10 @@
 
 html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    /* iOS Safari: 주소창·툴바와 어긋나는 100vh 레이아웃 완화 */
+    height: -webkit-fill-available;
+    overflow-x: hidden;
 }
 
 body {
@@ -27,6 +31,9 @@ body {
     line-height: 1.5;
     color: var(--green-900);
     background: var(--white);
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    min-height: 100dvh;
 }
 
 [lang="en"] {
@@ -95,7 +102,7 @@ a {
     align-items: center;
     gap: 0.75rem;
     min-height: var(--header-h);
-    padding: 0.5rem 1rem;
+    padding: 0.5rem max(1rem, env(safe-area-inset-right, 0px)) 0.5rem max(1rem, env(safe-area-inset-left, 0px));
     max-width: 1200px;
     margin: 0 auto;
     background: var(--white);
@@ -162,7 +169,7 @@ a {
     right: 0;
     bottom: 0;
     z-index: 199;
-    padding: 1.5rem 1.25rem 2rem;
+    padding: 1.5rem max(1.25rem, env(safe-area-inset-right, 0px)) calc(2rem + env(safe-area-inset-bottom, 0px)) max(1.25rem, env(safe-area-inset-left, 0px));
     background: var(--white);
     transform: translate3d(100%, 0, 0);
     visibility: hidden;
@@ -302,7 +309,7 @@ a {
 /* 태블릿 이상: 가로 메뉴, 햄버거 숨김 */
 @media (min-width: 768px) {
     .site-header__bar {
-        padding: 0.65rem 1.5rem;
+        padding: 0.65rem max(1.5rem, env(safe-area-inset-right, 0px)) 0.65rem max(1.5rem, env(safe-area-inset-left, 0px));
         gap: 1.25rem;
     }
 
@@ -582,6 +589,12 @@ a {
     color: var(--green-900);
 }
 
+/* 서브 페이지 등 fullPage 밖의 동일 푸터 블록 */
+body > .section--footer {
+    background: var(--white);
+    color: var(--green-900);
+}
+
 .section-footer-stack {
     display: flex;
     flex-direction: column;
@@ -693,7 +706,7 @@ a {
     width: 100%;
     max-width: none;
     margin: 0;
-    padding: 2.25rem 1.25rem 1.75rem;
+    padding: 2.25rem max(1.25rem, env(safe-area-inset-right, 0px)) calc(1.75rem + env(safe-area-inset-bottom, 0px)) max(1.25rem, env(safe-area-inset-left, 0px));
     text-align: left;
     background: var(--green-900);
     color: var(--green-100);
@@ -860,7 +873,7 @@ a {
     }
 
     .section--footer .site-footer {
-        padding: 2.75rem 2rem 2rem;
+        padding: 2.75rem max(2rem, env(safe-area-inset-right, 0px)) calc(2rem + env(safe-area-inset-bottom, 0px)) max(2rem, env(safe-area-inset-left, 0px));
     }
 }
 

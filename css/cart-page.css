@@ -7,13 +7,12 @@
 
 .page-cart {
     background: var(--white);
-    min-height: 100vh;
 }
 
 .cart-layout {
     max-width: 720px;
     margin: 0 auto;
-    padding: calc(var(--header-h, 4.25rem) + 1.25rem) 1.25rem 3rem;
+    padding: calc(var(--header-h, 4.25rem) + 1.25rem) max(1.25rem, env(safe-area-inset-right, 0px)) 3rem max(1.25rem, env(safe-area-inset-left, 0px));
 }
 
 .cart-hero {
